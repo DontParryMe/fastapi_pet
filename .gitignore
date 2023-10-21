@@ -53,4 +53,5 @@ docker-compose-local.yml
 *.db
 
 # migrations
+alembic.ini
 migrations/
