@@ -4,8 +4,9 @@ import os
 
 load_dotenv()
 
-POSTGRES_USER=os.getenv("POSTGRES_USER")
-POSTGRES_PASSWORD=os.getenv("POSTGRES_PASSWORD")
-POSTGRES_DB=os.getenv("POSTGRES_DB")
-REAL_DATABASE_URL = f"postgresql+asyncpg://{POSTGRES_USER}:{POSTGRES_PASSWORD}@localhost:5432/{POSTGRES_DB}"
+db_user = os.getenv("POSTGRES_USER")
+db_password = os.getenv("POSTGRES_PASSWORD")
+db_name = os.getenv("POSTGRES_DB")
+
+REAL_DATABASE_URL = f"postgresql+asyncpg://{db_user}:{db_password}@localhost:5432/{db_name}"
 
