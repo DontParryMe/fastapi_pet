@@ -10,3 +10,4 @@ db_name = os.getenv("POSTGRES_DB")
 
 REAL_DATABASE_URL = f"postgresql+asyncpg://{db_user}:{db_password}@localhost:5432/{db_name}"
 
+TEST_DATABASE_URL = f"postgresql+asyncpg://{db_user}:{db_password}@localhost:5433/{db_name}"

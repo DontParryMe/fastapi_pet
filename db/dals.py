@@ -14,5 +14,6 @@ class UserDAL:
             email=email,
         )
         self.db_session.add(new_user)
+        await self.db_session.commit()
         await self.db_session.flush()
         return new_user
